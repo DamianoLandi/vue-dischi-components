@@ -1,5 +1,13 @@
 <template>
-    <SongCard/>
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-2 gy-4 px-3" v-for="(song, index) in songList" :key="index">
+                    <SongCard :song="song"/>
+                </div>
+            </div>
+        </div>
+    </main>
 </template>
 
 <script>
@@ -28,5 +36,10 @@ export default {
 </script>
 
 <style>
-
+main{
+    height: calc(100vh - 100px);
+    background-color: #1E2D3B;
+    padding-top: 50px;
+    overflow-x: hidden;
+}
 </style>
